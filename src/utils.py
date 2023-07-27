@@ -39,8 +39,12 @@ def pages_to_images(
         logger.warning(f"The file extention for document {name} is wrong or there is no extension founded.")
         logger.warning("Trying to read as PDF.")
     
-    doc = fitz.Document(filename=doc_path, filetype=filetype)
-    
+    try:
+        doc = fitz.Document(filename=doc_path, filetype=filetype)
+    except fitz.fitz.FileDataError:
+        logger.warn("Skip converting {name} file: file is broken or have wrong extention.")
+        return
+
     for page in doc:
         pix = page.get_pixmap(dpi=dpi)
         pix_save_path = save_path / f"{name}_page_{page.number}.png"
