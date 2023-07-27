@@ -1,5 +1,6 @@
 import os
 from pathlib import Path
+from distutils.util import strtobool
 
 import supervisely as sly
 from dotenv import load_dotenv
@@ -24,7 +25,7 @@ INPUT_PATH = os.environ.get("modal.state.files", None)
 if INPUT_PATH is None or INPUT_PATH == "":
     INPUT_PATH = os.environ.get("modal.state.slyFolder")
 
-
+REMOVE_SOURCE = bool(strtobool(os.getenv("modal.state.remove_source", "False")))
 OUTPUT_PROJECT_NAME = os.environ.get("modal.state.project_name", "")
 DPI = int(os.environ.get("model.state.dpi", 300))
 
