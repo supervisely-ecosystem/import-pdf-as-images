@@ -24,6 +24,7 @@ DATASET_ID = sly.env.dataset_id(raise_not_found=False)
 INPUT_PATH = os.environ.get("modal.state.files", None)
 if INPUT_PATH is None or INPUT_PATH == "":
     INPUT_PATH = os.environ.get("modal.state.slyFolder")
+IS_ON_AGENT = api.file.is_on_agent(INPUT_PATH)
 
 REMOVE_SOURCE = bool(strtobool(os.getenv("modal.state.remove_source", "False")))
 OUTPUT_PROJECT_NAME = os.environ.get("modal.state.project_name", "")
