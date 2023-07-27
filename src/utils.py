@@ -42,7 +42,7 @@ def pages_to_images(
     try:
         doc = fitz.Document(filename=doc_path, filetype=filetype)
     except fitz.fitz.FileDataError:
-        logger.warn("Skip converting {name} file: file is broken or have wrong extention.")
+        logger.warn(f"Skip converting {name} file: file is broken or have wrong extention.")
         return
 
     for page in doc:
