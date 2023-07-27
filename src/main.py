@@ -53,10 +53,9 @@ def import_pdf_as_img(api: sly.Api, task_id: int):
 
     for dataset_path in g.CONVERTED_LOCAL_DIR.iterdir():
         if g.DATASET_ID is None:
-            dataset_name = dataset_path.name
             dataset_info = api.dataset.create(
                 project_id=project.id,
-                name=dataset_name,
+                name=dataset_path.name,
                 change_name_if_conflict=True,
             )
 
@@ -66,7 +65,7 @@ def import_pdf_as_img(api: sly.Api, task_id: int):
         batch_size = 10
         total = len(img_names)
         progress = sly.Progress(
-            f"Uploading images to dataset {dataset_name}",
+            f"Uploading images to dataset {dataset_info.name}",
             total_cnt=total
         )
 
