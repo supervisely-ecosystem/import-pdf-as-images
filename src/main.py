@@ -8,13 +8,13 @@ from utils import pages_to_images_from_folder_or_file, download_project
 
 def convert_pdf_to_images_on_agent(api: sly.Api) -> Path:
     local_project_path = download_project(api, g.INPUT_PATH)
-    
+
     for folder_or_file in local_project_path.iterdir():
         if folder_or_file.is_file():
             dataset_name = g.DEFAULT_DATASET_NAME
         else:
             dataset_name = folder_or_file.name
-            
+
         local_path = g.CONVERTED_LOCAL_DIR / dataset_name
         local_path.mkdir(parents=True, exist_ok=True)
         pages_to_images_from_folder_or_file(
@@ -31,7 +31,7 @@ def import_pdf_as_img(api: sly.Api, task_id: int):
     dir_info = api.file.list(g.TEAM_ID, g.INPUT_PATH)
     if len(dir_info) == 0:
         raise Exception(f"There are no files in selected directory: '{g.INPUT_PATH}'")
-    
+
     local_pdf_dir = convert_pdf_to_images_on_agent(api)
 
     if g.PROJECT_ID is None:
@@ -81,9 +81,9 @@ def import_pdf_as_img(api: sly.Api, task_id: int):
             )
             current = min(pos * batch_size, total)
             progress.set(current, total, report=True)
-        
+
         progress.set_current_value(total, True)
-    
+
     sly.fs.remove_dir(dir_=str(g.CONVERTED_LOCAL_DIR))
     sly.fs.remove_dir(dir_=str(local_pdf_dir))
 
@@ -91,9 +91,8 @@ def import_pdf_as_img(api: sly.Api, task_id: int):
         api.file.remove(team_id=g.TEAM_ID, path=g.INPUT_PATH)
         source_dir_name = Path(g.INPUT_PATH).parent.name
         api.logger.info(msg=f"Source directory: '{source_dir_name}' was successfully removed.")
-    
-    api.task.set_output_project(task_id=task_id, project_id=project.id, project_name=project.name)
 
+    api.task.set_output_project(task_id=task_id, project_id=project.id, project_name=project.name)
 
 
 if __name__ == "__main__":

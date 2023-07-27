@@ -38,7 +38,7 @@ def pages_to_images(
     if not is_pdf:
         logger.warning(f"The file extention for document {name} is wrong or there is no extension founded.")
         logger.warning("Trying to read as PDF.")
-    
+
     try:
         doc = fitz.Document(filename=doc_path, filetype=filetype)
     except fitz.fitz.FileDataError:
