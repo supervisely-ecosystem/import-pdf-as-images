@@ -48,13 +48,18 @@ def import_pdf_as_img(api: sly.Api, task_id: int):
     else:
         project = api.project.get_info_by_id(g.PROJECT_ID)
 
+    if g.DATASET_ID is not None:
+        dataset_info = api.dataset.get_info_by_id(g.DATASET_ID)
+
     for dataset_path in g.CONVERTED_LOCAL_DIR.iterdir():
-        dataset_name = dataset_path.name
-        dataset_info = api.dataset.create(
-            project_id=project.id,
-            name=dataset_name,
-            change_name_if_conflict=True,
-        )
+        if g.DATASET_ID is None:
+            dataset_name = dataset_path.name
+            dataset_info = api.dataset.create(
+                project_id=project.id,
+                name=dataset_name,
+                change_name_if_conflict=True,
+            )
+
         img_paths = list(dataset_path.iterdir())
         img_names = [p.name for p in img_paths]
 
