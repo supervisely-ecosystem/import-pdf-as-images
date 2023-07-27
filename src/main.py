@@ -29,10 +29,10 @@ def convert_pdf_to_images_on_agent(api: sly.Api) -> Path:
 @sly.timeit
 def import_pdf_as_img(api: sly.Api, task_id: int):
     dir_info = api.file.list(g.TEAM_ID, g.INPUT_PATH)
-    local_pdf_path = convert_pdf_to_images_on_agent(api)
-
     if len(dir_info) == 0:
         raise Exception(f"There are no files in selected directory: '{g.INPUT_PATH}'")
+    
+    local_pdf_dir = convert_pdf_to_images_on_agent(api)
 
     if g.PROJECT_ID is None:
         project_name = (
@@ -68,20 +68,20 @@ def import_pdf_as_img(api: sly.Api, task_id: int):
         for pos, (batch_names, batch_paths) in enumerate(zip(
             sly.batched(seq=img_names, batch_size=batch_size),
             sly.batched(seq=img_paths, batch_size=batch_size),
-        )):
+        ), start=1):
             batch_names = [str(bn) for bn in batch_names]
             api.image.upload_paths(
                 dataset_id=dataset_info.id,
                 names=batch_names,
                 paths=batch_paths,
             )
-            current = max(pos * batch_size, total)
+            current = min(pos * batch_size, total)
             progress.set(current, total, report=True)
         
-        progress.iters_done_report()
+        progress.set_current_value(total, True)
     
     sly.fs.remove_dir(dir_=str(g.CONVERTED_LOCAL_DIR))
-    sly.fs.remove_dir(dir_=str(local_pdf_path))
+    sly.fs.remove_dir(dir_=str(local_pdf_dir))
 
     if g.REMOVE_SOURCE and not g.IS_ON_AGENT:
         api.file.remove(team_id=g.TEAM_ID, path=g.INPUT_PATH)
