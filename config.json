@@ -6,7 +6,7 @@
         "images",
         "essentials"
     ],
-    "description": "Drag and drop PDFs as images to Supervisely.",
+    "description": "Drag and drop PDFs to import pages as images to Supervisely",
     "docker_image": "supervisely/base-py-sdk:6.72.81",
     "main_script": "src/main.py",
     "modal_template": "src/modal.html",
@@ -17,6 +17,9 @@
         "project_name": ""
     },
     "task_location": "workspace_tasks",
+    "icon": "https://github.com/supervisely-ecosystem/import-pdf-as-images/assets/119248312/c8085a42-e1fc-4f2c-a448-adc2cc41c849",
+    "icon_cover": true,
+    "poster": "https://github.com/supervisely-ecosystem/import-pdf-as-images/assets/119248312/7ffb46db-5831-4c9d-a421-8c60576ccea9",
     "headless": true,
     "context_menu": {
         "context_category": "Import",
