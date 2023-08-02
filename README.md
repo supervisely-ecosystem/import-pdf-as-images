@@ -21,7 +21,7 @@
 
 This app allows you to download pages of PDF files as PNG images.
 
-❗ Be aware that "Remove temporary files after successful import" flag is enabled by default, it will automatically remove source directory after import. 
+❗ Be aware that "Remove temporary files after successful import" flag is enabled by default, it will automatically remove temporary input directory after import. 
 
 # How To Run
 
