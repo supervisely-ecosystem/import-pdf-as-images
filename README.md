@@ -1,5 +1,5 @@
 <div align="center" markdown>
-<img src="https://github.com/supervisely-ecosystem/import-pdf-as-images/assets/119248312/11e644d7-4491-4fbe-ba3b-d77370938c00"/>  
+<img src="https://github.com/supervisely-ecosystem/import-pdf-as-images/assets/119248312/7ffb46db-5831-4c9d-a421-8c60576ccea9"/>  
 
 # Import PDF as Images
 
