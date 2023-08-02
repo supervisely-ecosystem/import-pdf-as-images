@@ -48,9 +48,17 @@ App can be launched from Ecosystem, Team Files, Images Project and Images Datase
 
 <img src="XXX"/>
 
-**Step 4.** Go to `Team Files` -> `Supervisely Agent` and find your folder there.
+## Run from Team Files
 
-### Import to existing Images Project:
+**Step 1.** Run the application from the context menu of the directory with images on Team Files page
+
+<img src="XXX">  
+
+**Step 2.** Select options and press the Run button
+
+<img src="XXX">
+
+### Run from Images Project:
 
 **Step 1.** Open context menu of images project -> `Run app` -> `Import`  -> `Import PDF as Images`.
 
@@ -64,7 +72,7 @@ App can be launched from Ecosystem, Team Files, Images Project and Images Datase
 
 <img src="XXX"/>
 
-### Import to existing Images Dataset:
+### Run from Images Dataset:
 
 **Step 1.** Open context menu of images dataset -> `Run app` -> `Import`  -> `Import PDF as Images`.
 
@@ -77,30 +85,4 @@ App can be launched from Ecosystem, Team Files, Images Project and Images Datase
 **Step 3.** Wait for the app to process your data, once done, link to your project will become available.
 
 <img src="XXX"/>
-
-
-## Input files structure
-
-Directories define dataset names. Images in root directory will be moved to dataset with name "`ds0`".
- 
-```
-.
-my_images_project
-├── img_01.png
-├── ...
-├── img_09.png
-├── my_folder1
-│   ├── img_01.png
-│   ├── img_02.png
-│   └── my_folder2
-│       ├── img_13.png
-│       ├── ...
-│       └── img_9999.png
-└── my_folder3
-    ├── img_01.png
-    ├── img_02.png
-    └── img_03.png
-```
-
-As a result we will get project with 3 datasets with the names: `ds0`, `my_folder1`, `my_folder3`. Dataset `my_folder1` will also contain images from `my_folder2` directory.
 
