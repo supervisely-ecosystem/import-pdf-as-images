@@ -4,7 +4,6 @@
     "categories": [
         "import",
         "images",
-        "essentials"
     ],
     "description": "Drag and drop PDFs to import pages as images to Supervisely",
     "docker_image": "supervisely/base-py-sdk:6.72.81",
