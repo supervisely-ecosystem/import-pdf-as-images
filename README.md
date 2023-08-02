@@ -31,7 +31,7 @@ App can be launched from Ecosystem, Team Files, Images Project and Images Datase
 * [running the app from images project](#run-from-images-project) will upload images to existing project, from which it was launched
 * [running the app from images dataset](#run-from-images-dataset) will upload images to existing dataset, from which it was launched
 
-### Run from Ecosystem:
+## Run from Ecosystem:
 
 **Step 1.** Go to Ecosystem page and find the app [Import PDF as Images](https://ecosystem.supervisely.com/apps/import-pdf-as-images).
 
@@ -44,7 +44,7 @@ App can be launched from Ecosystem, Team Files, Images Project and Images Datase
 **Step 2.** Drag & drop your data, or select already uploaded folder with data from `Team Files`, select options in the modal window and press the `Run` button, you will be redirected to the `Workspace tasks` page.
 
 <div align="center" markdown>
-<img src="https://github.com/supervisely-ecosystem/import-pdf-as-images/assets/119248312/6242362d-4631-49d8-a769-a6c191fb4568" width="400" style='padding-top: 10px'/>
+<img src="https://github.com/supervisely-ecosystem/import-pdf-as-images/assets/119248312/b0f4beac-dcd9-42e1-af36-96068c1e42c1" width="500" style='padding-top: 10px'/>
 </div>
 
 **Step 3.** Wait for the app to process your data, once done, link to your project will become available.
@@ -58,12 +58,12 @@ App can be launched from Ecosystem, Team Files, Images Project and Images Datase
 **Step 2.** Select options and press the Run button.
 
 <div align="center" markdown>
-<img src="https://github.com/supervisely-ecosystem/import-pdf-as-images/assets/119248312/72839170-12d9-4804-abd8-59bf3bdf91d4" width="400" style='padding-top: 10px'/>
+<img src="https://github.com/supervisely-ecosystem/import-pdf-as-images/assets/119248312/dcaf45b6-f97b-4794-a413-ed2efad6b26e" width="500" style='padding-top: 10px'/>
 </div>
 
 **Step 3.** Wait for the app to process your data, once done, link to your project will become available.
 
-### Run from Images Project:
+## Run from Images Project:
 
 **Step 1.** Open context menu of images project -> `Run app` -> `Import`  -> `Import PDF as Images`.
 
@@ -72,12 +72,12 @@ App can be launched from Ecosystem, Team Files, Images Project and Images Datase
 **Step 2.** Drag & drop your data, or select already uploaded folder with data from `Team Files`, select options in the modal window and press the `Run` button, you will be redirected to the `Workspace tasks` page.
 
 <div align="center" markdown>
-<img src="https://github.com/supervisely-ecosystem/import-pdf-as-images/assets/119248312/3c20ac80-fb81-4ff6-885f-ed081b4cd84d" width="400" style='padding-top: 10px'/>
+<img src="https://github.com/supervisely-ecosystem/import-pdf-as-images/assets/119248312/8b0fbbe6-6728-44ea-8d91-6e9cb0262aa2" width="500" style='padding-top: 10px'/>
 </div>
 
 **Step 3.** Wait for the app to process your data, once done, link to your project will become available.
 
-### Run from Images Dataset:
+## Run from Images Dataset:
 
 **Step 1.** Open context menu of images dataset -> `Run app` -> `Import`  -> `Import PDF as Images`.
 
@@ -86,7 +86,7 @@ App can be launched from Ecosystem, Team Files, Images Project and Images Datase
 **Step 2.** Drag & drop your data, or select already uploaded folder with data from `Team Files`, select options in the modal window and press the `Run` button, you will be redirected to the `Workspace tasks` page.
 
 <div align="center" markdown>
-<img src="https://github.com/supervisely-ecosystem/import-pdf-as-images/assets/119248312/3c20ac80-fb81-4ff6-885f-ed081b4cd84d" width="400" style='padding-top: 10px'/>
+<img src="https://github.com/supervisely-ecosystem/import-pdf-as-images/assets/119248312/8b0fbbe6-6728-44ea-8d91-6e9cb0262aa2" width="500" style='padding-top: 10px'/>
 </div>
 
 **Step 3.** Wait for the app to process your data, once done, link to your project will become available.
