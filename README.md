@@ -9,7 +9,7 @@
   <a href="#Result">Result</a> 
 </p>
 
-[![](https://img.shields.io/badge/supervisely-ecosystem-brightgreen)](https://ecosystem.supervise.ly/apps/supervisely-ecosystem/import-pdf-as-images)
+[![](https://img.shields.io/badge/supervisely-ecosystem-brightgreen)](../../../../supervisely-ecosystem/import-pdf-as-images)
 [![](https://img.shields.io/badge/slack-chat-green.svg?logo=slack)](https://supervise.ly/slack)
 ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/supervisely-ecosystem/import-pdf-as-images)
 [![views](https://app.supervise.ly/img/badges/views/supervisely-ecosystem/import-pdf-as-images.png)](https://supervise.ly)
@@ -33,7 +33,7 @@ App can be launched from Ecosystem, Team Files, Images Project and Images Datase
 
 ## Run from Ecosystem:
 
-**Step 1.** Go to Ecosystem page and find the app [Import PDF as Images](https://ecosystem.supervisely.com/apps/import-pdf-as-images).
+**Step 1.** Go to Ecosystem page and find the app [Import PDF as Images](../../../../supervisely-ecosystem/import-pdf-as-images).
 
 <img data-key="sly-module-link" data-module-slug="supervisely-ecosystem/import-pdf-as-images" src="https://github.com/supervisely-ecosystem/import-pdf-as-images/assets/119248312/e40be142-4285-49c8-8663-67b0443133ae" width="500px" style='padding-bottom: 20px'/> 
 
