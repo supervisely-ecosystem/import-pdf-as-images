@@ -1,6 +1,5 @@
 import os
 from pathlib import Path
-from distutils.util import strtobool
 
 import supervisely as sly
 from dotenv import load_dotenv
@@ -25,7 +24,16 @@ if INPUT_PATH is None or INPUT_PATH == "":
     INPUT_PATH = os.environ.get("modal.state.slyFolder")
 IS_ON_AGENT = api.file.is_on_agent(INPUT_PATH)
 
-REMOVE_SOURCE = bool(strtobool(os.getenv("modal.state.remove_source", "False")))
+def str_to_bool(value: str) -> bool:
+    normalized = value.lower()
+    if normalized in {"y", "yes", "t", "true", "on", "1"}:
+        return True
+    if normalized in {"n", "no", "f", "false", "off", "0"}:
+        return False
+    raise ValueError(f"invalid truth value {value!r}")
+
+
+REMOVE_SOURCE = str_to_bool(os.getenv("modal.state.remove_source", "False"))
 OUTPUT_PROJECT_NAME = os.environ.get("modal.state.project_name", "")
 DPI = int(os.environ.get("model.state.dpi", 300))
 
