@@ -1,12 +1,13 @@
 {
     "name": "Import PDF as Images",
     "type": "app",
+    "instance_version": "6.15.60",
     "categories": [
         "import",
         "images"
     ],
     "description": "Drag and drop PDFs to import pages as images to Supervisely",
-    "docker_image": "supervisely/base-py-sdk:6.72.81",
+    "docker_image": "supervisely/base-py-sdk:6.73.564",
     "main_script": "src/main.py",
     "modal_template": "src/modal.html",
     "modal_template_state": {
