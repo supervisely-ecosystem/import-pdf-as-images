@@ -1,2 +1,2 @@
 supervisely==6.73.564
-pymupdf==1.22.5
+pymupdf==1.27.2.3
